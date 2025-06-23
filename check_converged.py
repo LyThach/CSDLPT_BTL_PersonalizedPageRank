@@ -30,15 +30,15 @@ def check_convergence(file1, file2, epsilon=1e-4):
 
     print("\nMax difference:", max_diff)
     if max_diff < epsilon:
-        print("\n ĐÃ HỘI TỤ với epsilon =", epsilon)
+        print("\n CONVERGED with epsilon =", epsilon)
         return True
     else:
-        print("\n CHƯA HỘI TỤ với epsilon =", epsilon)
+        print("\n NOT CONVERGED with epsilon =", epsilon)
         return False
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print("Cách dùng: python check_converged.py resultX.txt resultY.txt")
+        print("Usage: python check_converged.py resultX.txt resultY.txt")
         sys.exit(1)
     
     file1 = sys.argv[1]
